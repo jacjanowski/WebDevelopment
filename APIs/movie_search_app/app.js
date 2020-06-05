@@ -11,6 +11,7 @@ app.get("/", function(req, res) {
 
 app.get("/results", function(req, res){
 	var query = req.query.search;
+	console.log(query);
 	var url = "http://omdbapi.com/?s=" + query + "&apikey=thewdb";
 	request(url,function(error,response,body){
 			
@@ -22,6 +23,7 @@ app.get("/results", function(req, res){
 			res.render("results", {data:data});
 		}
 		
+		res.render("error");
 
 	});
 	
