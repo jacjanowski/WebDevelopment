@@ -11,7 +11,7 @@ var express = require("express"),
 	User = require("./models/user"),
 	seedDB = require("./seeds");
     
-//requiring routes
+//requiring routes I EDITED THIS
 var commentRoutes = require("./routes/comments"),
 	campgroundRoutes = require("./routes/campgrounds"),
 	indexRoutes 		 = require("./routes/index");
@@ -36,7 +36,7 @@ app.use(flash());
 
 
 //seed the DB
-//seedDB();
+seedDB();
 
 
 //passport Configuration
